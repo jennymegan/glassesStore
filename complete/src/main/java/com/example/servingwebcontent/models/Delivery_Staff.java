@@ -1,15 +1,23 @@
 package com.example.servingwebcontent.models;
 
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Sunglasses
+
+@Entity
+
+public class Delivery_Staff
 {
+    @Id
+    @Column
     private int id;
+    @Column
+    private int company_id;
+    @Column
     private String name;
-    private String description;
-    private double price;
-    private int category;
+
 }
