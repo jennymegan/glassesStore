@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 
 @Entity
+@Table
 
 public class Delivery_Co
 {
