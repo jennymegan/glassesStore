@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-@Entity
+@Entity(name = "book")
 @Table
 
 public class Book
