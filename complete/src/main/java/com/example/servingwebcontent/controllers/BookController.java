@@ -18,21 +18,25 @@ public class BookController
 
     private static final Logger logger= LoggerFactory.getLogger(BookController.class);
 
+    @CrossOrigin
     @PostMapping("/book")
     private void addBook(@RequestBody Book book) {
         bookService.addNew(book);
     }
 
+    @CrossOrigin
     @GetMapping("/book")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
+    @CrossOrigin
     @GetMapping("/book/{id}")
     private Book getBook(@PathVariable("id") int id) {
         return bookService.getBookById(id);
     }
 
+    @CrossOrigin
     @DeleteMapping("/book/{id}")
     private void deleteBook(@PathVariable("id") int id) {
         bookService.delete(id);
